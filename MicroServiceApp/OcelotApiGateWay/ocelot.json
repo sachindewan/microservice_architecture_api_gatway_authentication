@@ -8,9 +8,55 @@
           "Host": "localhost",
           "Port": "44369"
         }
+
       ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "AuthKey"
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin"
+      },
+      "key": "category",
       "UpstreamPathTemplate": "/categoryservice",
       "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "57432"
+        }
+      ],
+      "FileCacheOptions": {
+        "TtlSeconds": 30,
+        "Region": "users"
+      },
+      "key": "users",
+      "UpstreamPathTemplate": "/authService",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "57432"
+        }
+      ],
+      "UpstreamPathTemplate": "/loginService",
+      "UpstreamHttpMethod": [ "POST" ]
+    }
+  ],
+  "Aggregates": [
+    {
+      "RouteKeys": [
+        "category",
+        "users"
+      ],
+      "UpstreamPathTemplate": "/category-users"
     }
   ]
 }
