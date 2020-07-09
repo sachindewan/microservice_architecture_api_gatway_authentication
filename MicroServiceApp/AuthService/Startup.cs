@@ -49,6 +49,7 @@ namespace AuthService
             identityBuilder.AddSignInManager<SignInManager<User>>();
             services.AddAuthentication();
             services.AddControllers();
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,6 +60,12 @@ namespace AuthService
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseSwagger();
+            app.UseSwaggerUI(swaggerOptions =>
+            {
+                swaggerOptions.SwaggerEndpoint("/swagger/v1/swagger.json", "Auth servoce");
+                swaggerOptions.RoutePrefix = string.Empty;
+            });
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>

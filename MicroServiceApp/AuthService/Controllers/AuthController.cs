@@ -34,13 +34,21 @@ namespace AuthService.Controllers
 
         public AuthDbContext _db { get; }
 
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK,Type=typeof(List<User>))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesDefaultResponseType]
         public async Task<IActionResult> GetUsers()
         {
             var users = await _db.Users.ToListAsync();
+            if (users == null) return NotFound();
             return Ok(users);
         }
 
         [HttpPost("login")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(object))]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesDefaultResponseType]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
             var _userFromDatabase = await _userManager.FindByNameAsync(userForLoginDto.UserName);

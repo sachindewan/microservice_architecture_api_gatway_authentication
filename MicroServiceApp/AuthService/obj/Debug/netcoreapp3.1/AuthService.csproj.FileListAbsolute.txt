@@ -63,5 +63,10 @@ D:\MyStuff\microservice_architecture_api_gatway_authentication\MicroServiceApp\A
 D:\MyStuff\microservice_architecture_api_gatway_authentication\MicroServiceApp\AuthService\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\MyStuff\microservice_architecture_api_gatway_authentication\MicroServiceApp\AuthService\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 D:\MyStuff\microservice_architecture_api_gatway_authentication\MicroServiceApp\AuthService\obj\Debug\netcoreapp3.1\AuthService.csprojAssemblyReference.cache
+D:\MyStuff\microservice_architecture_api_gatway_authentication\MicroServiceApp\AuthService\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\MyStuff\microservice_architecture_api_gatway_authentication\MicroServiceApp\AuthService\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\MyStuff\microservice_architecture_api_gatway_authentication\MicroServiceApp\AuthService\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\MyStuff\microservice_architecture_api_gatway_authentication\MicroServiceApp\AuthService\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\MyStuff\microservice_architecture_api_gatway_authentication\MicroServiceApp\AuthService\obj\Debug\netcoreapp3.1\AuthService.csproj.CoreCompileInputs.cache
+D:\MyStuff\microservice_architecture_api_gatway_authentication\MicroServiceApp\AuthService\obj\Debug\netcoreapp3.1\AuthService.MvcApplicationPartsAssemblyInfo.cs
 D:\MyStuff\microservice_architecture_api_gatway_authentication\MicroServiceApp\AuthService\obj\Debug\netcoreapp3.1\AuthService.MvcApplicationPartsAssemblyInfo.cache
